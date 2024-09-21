@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Class 5</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6727a25f-2bed-44e0-8a55-c5522109276b" class="page sans"><header><h1 class="page-title">Class 5</h1><p class="page-description"></p></header><div class="page-body"><p id="3473a5b7-fb0b-46bb-9310-d1bec9670dc4" class="">Topic Chapter 2 Operating System Organization</p><p id="1056cb2a-7d52-808b-9d8f-f58b0433d073" class="">A key requirement for an operating system is to support several activities at once.</p><p id="1056cb2a-7d52-80fc-ab1a-f9cb5d0d5ffd" class="">The operating system must <code>time-share</code> the resources of the computer among these prcesses. For example, even if there are more processes than there are hardware CPUs, the operating system must ensure that all of the processes get a chance to execute. There must also be <code>isolation</code> between the processes so they cannot create problems for each other.</p><p id="1056cb2a-7d52-8016-add2-c684a80c231f" class="">Opearating system must fulfill three requirements for its processes:</p><ol type="1" id="1056cb2a-7d52-8090-b996-f58b839bb1db" class="numbered-list" start="1"><li>Multiplexing / Time-sharing of hardware resources among processes</li></ol><ol type="1" id="70bf81ac-7abb-4e1c-895b-5e3b4a74b5f6" class="numbered-list" start="2"><li>Isolation</li></ol><ol type="1" id="fe3097f7-ff52-4229-a32e-c567e2ae5fbf" class="numbered-list" start="3"><li>Interaction</li></ol><p id="67bc704b-ec31-4ca0-8faf-0299fd68ac63" class="">XV6 is written in LP64C.</p><ul id="1056cb2a-7d52-8047-82cd-de5e5ba2cafa" class="bulleted-list"><li style="list-style-type:disc">Int = 32 bit</li></ul><ul id="1056cb2a-7d52-8009-b963-d154ce7eae7d" class="bulleted-list"><li style="list-style-type:disc">Longs and poitners  = 64 bit</li></ul><figure id="a3fb1a93-8746-422e-8a02-c3569bc975dd" class="image"><a href="image%205.png"><img style="width:708px" src="image%205.png"/></a></figure><p id="1056cb2a-7d52-801e-9088-ed3c90666f2a" class="">We will center our focus around a <code>monolithic</code> kernel.</p><p id="1056cb2a-7d52-8016-a5ae-e1ac0b7dcb12" class="">The ‘Core 1’ and ‘Core 2’ are the ‘harts’ that show up when you open XV6.</p><p id="1056cb2a-7d52-8097-9c67-ed881e8d1583" class="">UART is a protocol for communicating with hardware. (i think)</p><p id="1056cb2a-7d52-809b-aeed-f611627238ab" class="">
+</p><p id="1056cb2a-7d52-807c-be4e-d74a60b038a0" class="">To achieve strong isolation its helpful to forbit applications from directly accessing sensitive hardware resources, and instead to abstract the resources into services.</p><p id="1056cb2a-7d52-80ce-908d-ef5547713e38" class="">“Abstraction greatly simplifies the process.”</p><p id="1056cb2a-7d52-807b-8a91-cd1872f9ae9b" class="">Unix transparently switches hardware CPUs among processes, saving and restor-<br/>ing register state as necessary, so that applications don’t have to be aware of time sharing. This<br/></p><p id="1056cb2a-7d52-803e-9e7e-f9b152b0590f" class="">transparency allows the operating system to share CPUs <mark class="highlight-brown_background">even if some applications are in infinite<br/>loops.<br/></mark></p><p id="1056cb2a-7d52-801e-abb8-c21618164173" class="">
+</p><h2 id="1056cb2a-7d52-80e7-a024-ec0a33423a02" class="">User mode, Supervisor mode, and system calls</h2><p id="1056cb2a-7d52-80a3-ae0f-fe70e554405a" class="">To achieve strong isolation, the operating system must arrange that<br/>applications cannot modify (or even read) the operating system’s data structures and instructions<br/>and that applications cannot access other processes’ memory.<br/></p><figure id="a1be40f3-b1b4-494d-90be-455d7c63e5cd" class="image"><a href="image%206.png"><img style="width:708px" src="image%206.png"/></a></figure><p id="1056cb2a-7d52-809b-b9c5-d69b8e9149ed" class="">CPUs provide hardware support for strong isolation. For example, RISC-V has three modes</p><p id="1056cb2a-7d52-8024-850b-fee09b34677d" class="">in which the CPU can execute instructions: machine mode, supervisor mode, and user mode. In-<br/>structions executing in machine mode have full privilege; a CPU starts in machine mode. Machine<br/></p><p id="1056cb2a-7d52-80db-b1fc-c006e2376570" class="">mode is mostly intended for configuring a computer. Xv6 executes a few lines in machine mode<br/>and then changes to supervisor mode.<br/></p><p id="1056cb2a-7d52-8041-89e5-d4dd21e21385" class="">In supervisor mode the CPU is allowed to execute privileged instructions: for example, en-<br/>abling and disabling interrupts, reading and writing the register that holds the address of a page<br/></p><p id="894c42e1-64cb-4bc7-94b2-6958219f26e4" class="">table, etc. If an application in user mode attempts to execute a privileged instruction, then the CPU<br/>doesn’t execute the instruction, but switches to supervisor mode so that supervisor-mode code can<br/>terminate the application, because it did something it shouldn’t be doing. Figure 1.1 in Chapter 1<br/>illustrates this organization. An application can execute only user-mode instructions (e.g., adding<br/>numbers, etc.) and is said to be running in user space, while the software in supervisor mode can<br/>also execute privileged instructions and is said to be running in kernel space<br/><mark class="highlight-brown_background">. The software running<br/>in kernel space (or in supervisor mode) is called the kernel.<br/></mark></p><p id="1056cb2a-7d52-80a5-92f1-e7278b7036dc" class="">
+</p><p id="1056cb2a-7d52-80fe-aa69-d01189a4cfe0" class="">An application that wants to invoke a kernel function (e.g., the read system call in xv6) must<br/>transition to the kernel; an application cannot invoke a kernel function directly. CPUs provide a<br/>special instruction that switches the CPU from user mode to supervisor mode and enters the kernel<br/>at an entry point specified by the kernel. (RISC-V provides the ecall instruction for this purpose.)<br/>Once the CPU has switched to supervisor mode, the kernel can then validate the arguments of the<br/>system call (e.g., check if the address passed to the system call is part of the application’s memory),<br/>decide whether the application is allowed to perform the requested operation (e.g., check if the<br/>application is allowed to write the specified file), and then deny it or execute it. It is important that<br/>the kernel control the entry point for transitions to supervisor mode; <br/><mark class="highlight-brown_background">if the application could decide<br/>the kernel entry point, a malicious application could, for example, enter the kernel at a point where<br/>the validation of arguments is skipped.<br/></mark></p><p id="1056cb2a-7d52-8042-b752-fb19c749be46" class="">
+</p><p id="1056cb2a-7d52-800d-a668-c51d026d4219" class="">Monolithic kernel : The entire operating system resides in the kernel, so that the implementations of all system calls run in supervisor mode.</p><p id="dc43b45d-3867-428c-ae27-b786ee7853d3" class="">
+</p><p id="1056cb2a-7d52-80d9-9ff7-f761be9f3de9" class="">Downside: </p><p id="1056cb2a-7d52-80f1-9c9b-c1e1bfe9a356" class="">A downside of the monolithic organization is that the interfaces between different parts of the<br/>operating system are often complex (as we will see in the rest of this text), and therefore it is easy for an operating system developer to make a mistake. In a monolithic kernel, a mistake is<br/>fatal, because an error in supervisor mode will often cause the kernel to fail. If the kernel fails,<br/>the computer stops working, and thus all applications fail too. The computer must reboot to start<br/>again.<br/></p><p id="1056cb2a-7d52-80ce-8451-c523b1c01d79" class="">Microkernel:  Minimizing the amount of operating system code that runs in supervisor mode, and execute the builk of the operating system in user mode.</p><p id="1056cb2a-7d52-80c5-a8c4-f43b61cef3ae" class="">
+</p><p id="e4de517c-bbb3-4b1e-8b23-3ddedd34536a" class="">Control and status registers</p><ul id="1fa37eaf-5128-415c-be0d-5536d8441125" class="bulleted-list"><li style="list-style-type:disc">These are instructions like ecall, that control parts of the execution</li></ul><ul id="dd4da9ef-85f3-4acf-a5d4-8ec062852741" class="bulleted-list"><li style="list-style-type:disc">Priveleged Hardware</li></ul><div id="a00fe8dc-1fdb-44f5-b3b5-0e7f2b65c63d" class="column-list"><div id="2236db7e-988b-4f71-bfd8-624b6f952311" style="width:50%" class="column"><p id="36bfec6b-9d45-4b58-b67e-e1dfa39d1690" class="">Hardware wise</p><ul id="c23c2ed0-4315-4b7a-9ecf-a5c64faafcc8" class="bulleted-list"><li style="list-style-type:disc">User Mode</li></ul><ul id="023633df-ad6c-4c05-b00f-2640610ac2c2" class="bulleted-list"><li style="list-style-type:disc">Supervisor mode</li></ul><ul id="db80e10e-55a3-410e-9042-571673001816" class="bulleted-list"><li style="list-style-type:disc">Machine mode</li></ul><ul id="681176b6-4eb8-4b7b-948c-0f72ff1a612f" class="bulleted-list"><li style="list-style-type:disc">Hypervisor mode </li></ul></div><div id="2207305b-2a44-4be3-82e5-ba0c05811ba5" style="width:50%" class="column"><p id="0f515515-3e98-4029-a41f-b1f43b333454" class="">Software wise</p><ul id="1604f045-f840-4c65-a045-ea458fb6a4c2" class="bulleted-list"><li style="list-style-type:disc">User space</li></ul><ul id="1a88562e-c797-446b-9d7f-cd8e25b6faf2" class="bulleted-list"><li style="list-style-type:disc">Kernel space</li></ul><p id="5cc54429-c515-441f-9762-97ab5cc5ed24" class="">
+</p></div></div><p id="383b7a65-f32c-47e5-8c5d-fbbbf0776b57" class="">(you can say there is a correspondence between user mode, user space, and also supervisor mode and kernel mode)</p><p id="fc57545e-cfd4-4ef5-9517-e012965edcdd" class="">ecall is a hardware counterpart of system calls. (ecall = environment call)</p><p id="1ad5b389-1cc3-4109-a672-02ec2ba20634" class="">QEMU is 64 bit architecture.</p><p id="89269af4-a144-4db4-925d-9e94e291c66f" class="">A process is one mega data structure.</p><p id="e6909616-a9b7-46a5-9fd9-2501ded414a7" class="">
+</p><p id="e76056a7-b874-4df8-9e20-2577db231aef" class="">( SILVER SHATS???? new book ) </p><p id="c1fb7b9c-453d-40f7-94a2-cd26432b2b52" class="">Memory mapping.</p><p id="0efa4d8a-3e84-48eb-83b0-566d55ca38aa" class="">Cores can interrupt other cores.</p><p id="5b1b8f33-9137-4463-a5cc-ff89a796a18a" class="">CSRR - Control and Status Register Read.</p><p id="5df94322-067f-438f-8d9b-1c3c5fc97591" class="">mhartid - this is the starting location of the cores, that the machine mode will implement.</p><p id="fced8d6d-9ddc-45aa-9646-08e570f75c49" class="">Each core has its own respective stack.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

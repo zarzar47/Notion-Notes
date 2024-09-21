@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Class 3</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e58b7ecc-89d6-4b19-9459-60a509df452f" class="page sans"><header><h1 class="page-title">Class 3</h1><p class="page-description"></p></header><div class="page-body"><p id="29cf426a-55b6-4b4f-b812-39a12845ffa0" class="">The OS provides a collection of system calls that a kernel provides and it is the interface that user programs see to interact with the kernel.</p><h1 id="c6420dc6-bafc-4792-90f3-bb0c5eacac2c" class="">System Calls</h1><p id="868a5b80-a04d-41f5-bd00-bdf054fb8210" class="">A <code>system Call</code> is a mechanism that allows a program to interact with the operating system (OS). When a program needs to perform tasks like reading from a file, writing to the console or mapping memory, it uses system calls to request services from the OS’s kernel.</p><h3 id="4c9cf45f-39ef-4c91-9b6b-b5fbfc2b5f99" class="">Key Concepts:</h3><ol type="1" id="bc5c8aed-4d5f-4460-8efa-ccb883a7210c" class="numbered-list" start="1"><li><strong>User Mode vs. Kernel Mode:</strong><ul id="fb482468-4a77-4173-a7f6-d19e149ee79f" class="bulleted-list"><li style="list-style-type:disc"><strong>User Mode:</strong> When an application (e.g., a game or a browser) runs, it&#x27;s in user mode. In this mode, the application has limited access to system resources for security and stability reasons.</li></ul><ul id="cf5ddd69-9fd1-429c-9508-abf4e12c2502" class="bulleted-list"><li style="list-style-type:disc"><strong>Kernel Mode:</strong> The kernel has unrestricted access to all system resources. It manages hardware, process scheduling, memory, and I/O operations.</li></ul><p id="2a6aea4c-5398-4b84-9957-44d8877b3346" class="">System calls are the gateway for a user-mode application to request services from the kernel.</p></li></ol><ol type="1" id="51f86d0d-c29a-404b-aa40-a826b16ad10d" class="numbered-list" start="2"><li><strong>System Call Interface:</strong><br/>The OS provides a set of system calls that applications can use. These are usually defined by the OS. Examples include:<br/><ul id="d1b47156-fc54-405a-b50e-5822c39431f4" class="bulleted-list"><li style="list-style-type:disc"><strong>File Management:</strong> <code>open()</code>, <code>read()</code>, <code>write()</code>, <code>close()</code></li></ul><ul id="1ab5afc8-488d-4e50-9a89-1e41a3a62c85" class="bulleted-list"><li style="list-style-type:disc"><strong>Process Control:</strong> <code>fork()</code>, <code>exec()</code>, <code>exit()</code></li></ul><ul id="48150555-508f-4d1c-8a07-3ee8ae78f68e" class="bulleted-list"><li style="list-style-type:disc"><strong>Memory Management:</strong> <code>mmap()</code>, <code>brk()</code></li></ul></li></ol><ol type="1" id="9058d137-488d-40eb-90ae-4ecbd28e0122" class="numbered-list" start="3"><li><strong>How System Calls Work:</strong><ul id="f71db541-bf93-4707-8a6c-29523b1ddae9" class="bulleted-list"><li style="list-style-type:disc">A program invokes a system call, typically via a wrapper function in a standard library (e.g., <code>fopen()</code> calls the <code>open()</code> system call).</li></ul><ul id="31785ea8-d775-4e3f-a371-49b39461ef5e" class="bulleted-list"><li style="list-style-type:disc">The system call triggers a software interrupt to transition from user mode to kernel mode. (alot of info about this in chapter 4).</li></ul><ul id="22b19d61-4568-49b3-92c9-1649b11f653e" class="bulleted-list"><li style="list-style-type:disc">The kernel handles the request, executes the necessary operations (e.g., reading from a disk), and then returns the result to the user-mode program. (and transitions back into user space).</li></ul></li></ol><h1 id="aa5c63f6-a040-4244-871b-a090dce01137" class="">The Shell</h1><p id="82ac5b99-5d80-4c75-a9b9-1e9743c99d14" class="">The <code>shell</code> is an ordinary program that reads commands from the user and executes them. The fact that the shell is a user program, and not part of the kernel, illustrates the power of the system call interface. The shell itself is not special. The shell itself is easy to replace, as such, modern UNIX systems have a variety of shells to choose from, each with its own user interface and scripting features.</p><p id="41610a30-d984-4d5d-be9c-16af713d2e01" class="">The shell serves as an interface between the user and operating system. It allows users to interact with the system by executing commands, running programs, and managing files.</p><ul id="f99c8799-cde4-42b7-b55e-2ccef60b7718" class="bulleted-list"><li style="list-style-type:disc"><strong>Command Execution Interface:</strong><ul id="741b1bc3-a542-4253-b406-6f06b9486abf" class="bulleted-list"><li style="list-style-type:circle">The shell interprets and executes user commands. For instance, when you type <code>ls</code>, the shell interprets this as a request to list files in the current directory. It then runs the appropriate program (e.g., the <code>ls</code> command in Unix/Linux).</li></ul><ul id="272ac8d1-a41b-4007-8221-0324e0d77ee0" class="bulleted-list"><li style="list-style-type:circle">Shells allow for both interactive command execution (executing commands one by one) and scripting (automating tasks by writing scripts).</li></ul></li></ul><ul id="41d80bc8-eac0-40f4-a978-ada8ea29c46d" class="bulleted-list"><li style="list-style-type:disc"><strong>Interaction with System Calls:</strong><ul id="631e8f0d-0c74-4d4c-9280-f7ae8378866f" class="bulleted-list"><li style="list-style-type:circle">Shells provide a user-friendly way to trigger system calls. For example, when you execute a file-related command like <code>cp</code> to copy files, the shell ultimately invokes the necessary system calls (like <code>open()</code>, <code>read()</code>, and <code>write()</code>) under the hood.</li></ul><ul id="03c66811-9563-4f38-b463-6ec6799758cb" class="bulleted-list"><li style="list-style-type:circle">The shell abstracts away the low-level details of system calls, making it easier for users to interact with the OS.</li></ul></li></ul><ul id="35ada0a5-4d47-4c73-9277-e35c88869893" class="bulleted-list"><li style="list-style-type:disc"><strong>Environment Management:</strong><ul id="b3cb144e-feaa-45aa-b1d9-4bd0c0c0e5f0" class="bulleted-list"><li style="list-style-type:circle">Shells manage the environment variables that define the system&#x27;s operating environment. For example, <code>PATH</code> is an environment variable that defines directories where executable programs are located.</li></ul><ul id="79282cee-23ad-41b1-8292-6302e04c8de1" class="bulleted-list"><li style="list-style-type:circle">You can set, modify, and view environment variables in the shell, which influences how programs behave.</li></ul></li></ul><ul id="f25457cc-406b-40c2-aeea-2a0ccb0b4eb8" class="bulleted-list"><li style="list-style-type:disc"><strong>Pipeline and Redirection:</strong><ul id="8b18746e-16ef-417f-a954-0b6b9412ac3b" class="bulleted-list"><li style="list-style-type:circle">One of the key features of Unix shells is their ability to pipe the output of one command to another using the <code>|</code> symbol. This allows users to chain commands together to perform complex tasks.</li></ul><ul id="07dcaf84-7848-4561-895f-b1c3b5abdbe5" class="bulleted-list"><li style="list-style-type:circle"><strong>Piping</strong> is a feature of Unix-like operating systems (and some others, like Windows PowerShell) that allows the output of one command to be used as the input to another command. It&#x27;s a powerful mechanism that lets you chain multiple commands together to perform complex operations efficiently, without needing to store intermediate results in temporary files.</li></ul></li></ul><p id="14d0239a-d8bd-41e4-aae3-ff59a7a2cd13" class="">Extended information about some of the system calls:</p><ol type="1" id="1086cb2a-7d52-80c0-b790-ec17dbb2a585" class="numbered-list" start="1"><li>Wait(int *status) : Wait returns the pid of a child process when the child is finished processing, it also returns the status of the child’s process (success or failure) within the address of the pointer assigned to it. In cases that there are no children wait returns -1. If the return status is not needed one can pass a 0 to wait();</li></ol><ol type="1" id="1086cb2a-7d52-8037-8f63-c7831cefd53e" class="numbered-list" start="2"><li>execute(char *file, char *argv[]) : replaces the current process with the new process, BUT does not affect the file descriptor table from the previous process. It will only return a value if an exception has occured within the new process.</li></ol><ol type="1" id="1086cb2a-7d52-80ad-b8d2-ddca92c9a484" class="numbered-list" start="3"><li>Close(int fd) : The close system call releases a file descriptor, making it free for reuse by a future open, pipe, or dup system call.</li></ol><h1 id="53809dac-fdb0-44de-af8d-dae8b711eeb4" class="">Forking</h1><p id="6ae0df1c-ed7f-44bf-9210-f3db75366aad" class="">Forking is a system call in which a process is duplicated into a child process that has a duplicate of the address space of the original ‘parent’ process. In these two processes, the parent and the child are similar only in the fact that they are initially copies of each other. But they differ in a number of ways.</p><ol type="1" id="dd2be5b7-c9ed-41e4-aa15-8a5638c2d40e" class="numbered-list" start="1"><li>Both of them have the same File descriptor table at the start and after successful forking they maintain their FD tables themselves, meaning any changes to the FD table the child makes is independant of those of the parent.</li></ol><ol type="1" id="3fa2d895-123d-4180-ac4a-40e10321765b" class="numbered-list" start="2"><li>Since all processes are identified by their process identifications (PIDs). The child process’s ID relative to the parent is 0.</li></ol><ol type="1" id="a2934294-f4d5-45ae-b01d-68ae49dcb631" class="numbered-list" start="3"><li>After successful forking both Parent and Child processes follow the logic in their code from the fork() command. Meaning after the fork() command they continue from their own program flow.</li></ol><p id="2e14b2b6-7948-469d-8d24-521e7ed67bdb" class="">How to identify if we’re in a parent process or a child process?</p><p id="561e94d2-06ed-4f90-a576-2d15f4babe21" class="">After forking the fork() command returns to us a PID. This PID is either 0 (meaning the code being executed is within a child process) or not 0 (meaning the code being executed is within the parent process). Identifying the PID can allow us to execute whichever part of the code we need.</p><p id="88e7f505-ca16-4b84-869c-30ddbfe0afa9" class="">What if the parent executes before the child?</p><p id="0c522373-b68e-4555-816f-aa70cfb817e5" class="">Its difficult to tell which process will finish execution first, so the wait() system call is used with in the parent (after confirming its PID) to pause the execution until the child process has been terminated (or in some instances killed) (The wait() system call is also needed in stopping a child process from turning into a zombie).</p><p id="a7048e5b-4e50-473e-9791-6dc40ebba659" class="">
+</p><h2 id="925fc90b-e84b-4d86-a78c-eb027636daf6" class="">File descriptors</h2><p id="c523ab43-5303-4e6a-83cb-59475a0c989a" class="">file descriptor is an integer number 0, 1, 2, 3… each of these integers are assigned to an object.</p><p id="b8754e0c-8296-46c5-81d2-6aaaa4d0ed2b" class="">These descriptors are assigned to kernel managed objects that a process may read or write to. A process may obtain a file descriptor by opening a file, directory or device or by creating pipes or by duplicating an existing file descriptor.</p><p id="4235d0ff-57ca-46df-b724-09409ecea026" class="">Whenever a process starts a file descriptor table is opened (fd = file descriptor).</p><p id="02a248ba-df05-413d-a327-958abc59d972" class="">FD table</p><table id="47e9e09a-f6da-46d4-823a-befeebc99448" class="simple-table"><tbody><tr id="67370a33-8443-425c-b88e-720444ff6510"><td id="\oPs" class="">0</td><td id="|pf~" class="">Standard input</td></tr><tr id="e400bb87-4a41-49f7-83ff-cfc1cfdac4e4"><td id="\oPs" class="">1</td><td id="|pf~" class="">Standard Output</td></tr><tr id="165f90dc-4652-4334-9fc8-aa84f57725f6"><td id="\oPs" class="">2</td><td id="|pf~" class="">error output</td></tr><tr id="114102ba-0c87-4198-bf7c-8c0950c4d5f1"><td id="\oPs" class="">…</td><td id="|pf~" class="">object</td></tr></tbody></table><p id="42f8f14d-9ca7-45a0-a3c3-734ebff578d6" class="">Standard Input and Output is the input and output from any process.</p><p id="f6f04252-5168-4470-b28d-059c57d8ab40" class="">File descriptors are used by system calls by processes to specify what file to work on.</p><p id="1e86c9fb-7f44-425b-ba19-69feec56b654" class="">In the files for reading and writing, the processes do not need to ensure that they continue where they left off, instead the kernel makes sure to continue where the previous process left off.</p><p id="3104d2d5-4823-4354-bf4b-b8874fd2facf" class="">Each process has its own set of file descriptors, ensuring that file operations in one process does not interfere with those in another.</p><p id="5e7bd411-18b9-4d87-bfca-d593006cee4d" class="">the wait function is needed for the parent to know whether or not the child processes have been executed or it has been killed (ended abruptly).</p><p id="c326a043-4860-4781-b09d-c792c31f7fbe" class="">Try to relate all the functions with risc v functionality.</p><p id="426da1eb-e77e-4e82-801a-874aa171832a" class="">File description tables are shared between child and parent processes when forked, after forking they are independant.</p><p id="8f42d1a6-7c2b-458c-b7d6-bbfed72bcd62" class="">
+</p><h2 id="1006cb2a-7d52-8032-b7cf-fa646a0db5e7" class="">File Descriptors</h2><p id="1006cb2a-7d52-8043-a5fa-c435a39aac72" class="">A file descriptor is a small integer representing a kernel-managed object that a process may read<br/>from or write to. A process may obtain a file descriptor by opening a file, directory, or device,<br/>or by creating a pipe, or by duplicating an existing descriptor. For simplicity we’ll often refer<br/>to the object a file descriptor refers to as a “file”; the file descriptor interface abstracts away the<br/>differences between files, pipes, and devices, making them all look like streams of bytes. We’ll<br/>refer to input and output as I/O.<br/></p><figure id="8fb0aa74-2dce-4e23-9c34-9e42401763e7" class="image"><a href="hhp3_-_xv6_Kernel-35_File_Descriptors_and_Open_Files_oWuVGDese4k_-_1339x753_-_2m16s.png"><img style="width:708px" src="hhp3_-_xv6_Kernel-35_File_Descriptors_and_Open_Files_oWuVGDese4k_-_1339x753_-_2m16s.png"/></a></figure><p id="1006cb2a-7d52-80be-8a70-df0a893ed672" class="">A <strong>file descriptor (FD)</strong> is an integer that the operating system&#x27;s kernel assigns to an open file, socket, or other I/O resources for each process. While file descriptors are abstract numbers, they represent handles to internal kernel structures, which is where the actual work of interacting with files takes place.</p><p id="1006cb2a-7d52-8042-99eb-ccfa3a409e20" class="">To understand how the kernel uses file descriptors to identify and manage files, here’s a deeper look:</p><h3 id="1006cb2a-7d52-8055-a034-c692a4c00d00" class="">1. <strong>Opening a File and FD Creation</strong></h3><p id="1006cb2a-7d52-80c7-a142-f370edbf11e9" class="">When a process opens a file (using a system call like <code>open()</code>, <code>fopen()</code>, etc.), the kernel does the following:</p><ul id="1006cb2a-7d52-8030-92c3-fcb1e9906aa2" class="bulleted-list"><li style="list-style-type:disc"><strong>File Table Entry</strong>:<mark class="highlight-orange_background"> The kernel creates an entry in the process&#x27;s file descriptor table, mapping the file descriptor (an integer) to an entry in the system-wide </mark><mark class="highlight-orange_background"><strong>file table</strong></mark><mark class="highlight-orange_background">.</mark></li></ul><ul id="1006cb2a-7d52-8052-a298-c450ebc725c2" class="bulleted-list"><li style="list-style-type:disc"><strong>File Table Entry</strong>: The file table entry contains crucial metadata like:<ul id="96d96ac6-3e4b-44a6-8731-b503823f00e1" class="bulleted-list"><li style="list-style-type:circle"><strong>Pointer to the inode (Index Node)</strong>: The file&#x27;s metadata, such as permissions, size, and disk location, is stored in an inode (in Unix-like systems).</li></ul><ul id="97df3371-acca-4972-a9b9-19ae293c6210" class="bulleted-list"><li style="list-style-type:circle"><strong>File Offset</strong>: The current read/write position in the file.</li></ul><ul id="975b897e-8c1b-4636-9e7d-97a24b1a1b3c" class="bulleted-list"><li style="list-style-type:circle"><strong>Access Mode</strong>: Read, write, or both.</li></ul></li></ul><p id="1006cb2a-7d52-80f3-a20f-d764060e4888" class="">The file descriptor serves as an index into this per-process file descriptor table, which points to an entry in the system&#x27;s global file table.</p><h2 id="158a94d6-07c0-45ec-acf3-34fd4f0e037b" class="">Trampoline frames and Trap frames</h2><p id="9a4171da-7517-4094-9e37-4fcecefcee49" class="">Since these two things are important parts of how a CPU switches between different processes and the crux of “context switching”, its important to know what they are.</p><ol type="1" id="bdae64c9-b64b-44c3-b069-3bcc7a0b5f1c" class="numbered-list" start="1"><li>Trap frame<ul id="75a259c7-4588-4d99-81ed-566a5942f291" class="bulleted-list"><li style="list-style-type:disc">A trap frame is a data structure that stores the current state of the CPU when a process is running. The trap data is saved when a <strong>trap occurs.</strong></li></ul><ul id="8d8e5122-b392-4308-a2de-feba3fe2b1c5" class="bulleted-list"><li style="list-style-type:disc">What is a trap? A trap is an event that requires the CPU to halt the current process and move onto something else. It could be an interupt, exception or a system call. Just whenever causes the CPU to switch from user mode to kernel mode.</li></ul><p id="a5e6ec33-b0d5-457e-8ab5-3b5204429d5d" class="">When a trap happens:</p><ul id="05c2a070-851d-4551-b2e0-2a296e49fc67" class="bulleted-list"><li style="list-style-type:disc">The current state of the CPU (registers, program counter, stack pointer, etc.) is saved into a trap frame.</li></ul><ul id="539a9c2b-6900-4626-a40f-3b0904b2a907" class="bulleted-list"><li style="list-style-type:disc">The OS can then handle the trap (e.g., servicing an interrupt or handling an exception).</li></ul><ul id="db7b85cf-8d8b-4486-9095-72e2dfb92829" class="bulleted-list"><li style="list-style-type:disc">After the trap is handled, the OS uses the trap frame to restore the CPU state and return control to the original context (e.g., the user program).</li></ul></li></ol><ol type="1" id="f97fc4e6-5268-4f5a-bd2a-08aecab3708d" class="numbered-list" start="2"><li>Trampoline frames<ul id="b1669502-8b92-4b66-9f96-14755a6822dd" class="bulleted-list"><li style="list-style-type:disc">A <strong>trampoline frame</strong> (or simply a &quot;trampoline&quot;) is a small piece of code or data structure used to facilitate the transition between different modes or contexts in a controlled manner. Trampolines are often used in OS kernels when switching between user space and kernel space or when dealing with dynamic linking of code.<p id="6a92b36f-4036-4e76-8f48-9a4c91f8570a" class="">In the OS context, trampolines are often used for:</p><ul id="f60e033e-71e5-4077-91bd-4210a97bb070" class="bulleted-list"><li style="list-style-type:circle"><strong>Switching between different privilege levels</strong> (e.g., from user mode to kernel mode).</li></ul><ul id="1006cb2a-7d52-80fd-870a-e8813067b217" class="bulleted-list"><li style="list-style-type:circle">Used to handle interrupts in the case of XV6.</li></ul><ul id="1006cb2a-7d52-8050-843b-f0747e508817" class="bulleted-list"><li style="list-style-type:circle">Switching between User-mode and Kernel-mode for handling interrupts.</li></ul></li></ul><p id="d55bd597-28b1-4b11-958b-28745527ee83" class="">(I honestly still dont understand what the trampoline frame actually does, should probably ask sir) ( I know what it does now)</p></li></ol><p id="ee303963-e049-417f-a1eb-8ccc4d169e0d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
