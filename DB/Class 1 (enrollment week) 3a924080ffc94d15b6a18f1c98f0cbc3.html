@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Class 1 (enrollment week)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3a924080-ffc9-4d15-b6a1-8f1c98f0cbc3" class="page sans"><header><h1 class="page-title">Class 1 (enrollment week)</h1><p class="page-description"></p></header><div class="page-body"><p id="a17b9bd3-64b5-4f0c-b4ac-461403f7c230" class="">Instructor : Abeera Tariq</p><p id="16ab5eee-81fa-4136-a1ee-c45eabe94099" class="">Announced Quizzes.</p><p id="f620751f-7e34-4da8-a602-e74be8d9504a" class="">Course Project Team based.</p><table id="71e9ef2c-c559-4fc0-9631-5aa13ec52f5e" class="simple-table"><tbody><tr id="62f2b1a3-8e29-4fc3-9a23-05196130bc36"><td id="ga=C" class="">Mid term</td><td id="]D:t" class="">20</td></tr><tr id="cbc604a4-013a-48c2-a210-a3cce6994eca"><td id="ga=C" class="">Final Exam</td><td id="]D:t" class="">30</td></tr><tr id="5af80af7-8f38-4cbe-bf35-8b4c0090120e"><td id="ga=C" class="">Course Project </td><td id="]D:t" class="">20</td></tr><tr id="79d1a3e7-43b9-4625-954e-9ade96ce0ede"><td id="ga=C" class="">Quizzes</td><td id="]D:t" class="">10</td></tr><tr id="a4da8b69-a517-4a09-a653-f48d547e41e5"><td id="ga=C" class="">Assignments/labs</td><td id="]D:t" class="">20</td></tr></tbody></table><p id="79fc2b5a-7395-4242-9af4-2fa7e70e1a3c" class="">A key point is essentially how a DBMS developer should be thinking In terms of a company.</p><p id="f46c5b96-ca49-45f3-b985-86bae5a3828f" class="">Data → Information → Insight</p><p id="ff7c99d1-9b9b-4381-a8c4-fdbed3aaafd4" class="">“The goal should be to turn data into information (structured data with meaning) and turn that information into Insight.”</p><p id="a0938dc4-4f15-41f5-a95a-559dd0c80343" class="">
+</p><p id="9781b59e-62be-45e0-94b4-118b479787d0" class="">D-I-K-W pyramid</p><p id="fc0fc486-5487-48f1-b281-c17eb35179ec" class="">Data → Information → Knowledge → Wisdom</p><p id="27d381f6-b46c-4101-b250-f280cd467409" class="">Data → a collection of facts in a raw or unorganized form</p><p id="1619def3-5abe-4448-9ac7-0c8bad1d5eb9" class="">Information → easier to measure, visualize and analyze data for a specific purpose</p><p id="f364ba23-e870-4d0f-a75b-534ba64358ca" class="">Knowledge → Connected to other peices help us understand how to apply information to achieve our goal</p><p id="1c772200-b35c-4a4e-876c-2978fbdb9c5e" class="">Wisdom → Wisdom is knowledge applied in action.</p><h1 id="932dda2a-b25e-48c7-87ce-705b9cb71bc7" class="">Class 1 (enrollment week)</h1><p id="2080aaa7-3e5f-49f3-853f-6a49a48245ac" class="">Instructor : Abeera Tariq</p><p id="403feab6-a038-43ee-bfa5-6ef8c8cefcec" class="">Announced Quizzes.</p><p id="7aa34303-0be8-4730-ab4b-fa2b8dee47a7" class="">Course Project Team based.</p><table id="b3aa3e73-e967-421a-b6a1-af6469ad4f84" class="simple-table"><tbody><tr id="1c1dce6a-b888-4f4c-853c-7abeb1d5976e"><td id="tO}R" class="">Mid term</td><td id="FLNm" class="">20</td></tr><tr id="ee2d53d0-7428-48da-adc1-ae21974ab643"><td id="tO}R" class="">Final Exam</td><td id="FLNm" class="">30</td></tr><tr id="fa7b3ef8-c1c3-4b44-9240-74fd30085a36"><td id="tO}R" class="">Course Project</td><td id="FLNm" class="">20</td></tr><tr id="c638d19b-6ea3-474d-9d75-ea33cdebe53f"><td id="tO}R" class="">Quizzes</td><td id="FLNm" class="">10</td></tr><tr id="dbcc2ef0-4242-4f2c-895e-3b975ec6ef55"><td id="tO}R" class="">Assignments/labs</td><td id="FLNm" class="">20</td></tr></tbody></table><p id="ad96fce8-48c9-4fa3-9315-33972af6e5dd" class="">A key point is essentially how a DBMS developer should be thinking In terms of a company.</p><p id="780c3165-0d14-4f68-9a12-2ea0b6e24e3b" class="">Data → Information → Insight</p><p id="46a78f93-6bad-4022-8c12-2526a49f2e26" class="">“The goal should be to turn data into information (structured data with meaning) and turn that information into Insight.”</p><p id="cfdc98e8-8f25-4536-a607-eaaf1d584f29" class="">D-I-K-W pyramid</p><figure id="37663f0b-9e24-4265-bd31-e85fda5ef85a" class="image"><a href="image.png"><img style="width:708px" src="image.png"/></a></figure><p id="ae34f116-8550-46b8-ae60-c3d090575d36" class="">
+</p><p id="a927a756-3dbc-4a88-ad85-92dac44c5782" class="">Definition: A database can be defined as a collection of related data items within a specific <code>business </code>process or problem setting. / Shared collection of logically related data ( and a description of the data), designed to meet the information needs of an organization.</p><p id="5cc9bdfc-7ef6-4244-b4a2-b329ac2f01a9" class="">A <code>database management system</code> is the software used to <code>manage the data</code>. Combined with the data makes a <code>database system</code>. It is essentially a software package.<div class="indented"><ul id="ebdb8a2d-eb5e-42fe-96c9-f131f7a4c052" class="bulleted-list"><li style="list-style-type:disc">System catalog (<code>metadata</code>) → description of data to enable program-data independence.</li></ul><ul id="a5514e24-ea86-46c5-8f59-c2721c47f1ea" class="bulleted-list"><li style="list-style-type:disc">Logically related data comprises <code>entities</code>, <code>attributes</code> and <code>relationships</code> of an organization’s information.</li></ul></div></p><p id="984e2ba7-1bcf-4d09-812e-3a56899f4192" class="">Access control capabilities:<div class="indented"><ol type="1" id="7a02a6f2-62b4-41b5-aa53-406c5842164a" class="numbered-list" start="1"><li>security system → controls who has access to what type of data to maintain <mark class="highlight-brown_background">security</mark>.</li></ol><ol type="1" id="e5a83b39-4eb7-4299-9033-52d19a1fe50e" class="numbered-list" start="2"><li>integrity system → An <strong>integrity system</strong> in a DBMS ensures the accuracy, consistency, and validity of data by enforcing rules, such as data constraints (e.g., primary keys, foreign keys, and unique constraints), to prevent invalid or corrupt data from entering the database.</li></ol><ol type="1" id="a9af6973-e923-491b-ab11-5020dd6ffb96" class="numbered-list" start="3"><li>concurrency control system → A <strong>concurrency control system</strong> in a DBMS manages simultaneous data access by multiple users or transactions, ensuring data consistency and isolation. It prevents conflicts like lost updates or <code>dirty reads</code> by using mechanisms such as locking, timestamps, or optimistic concurrency control.</li></ol><ol type="1" id="bcd1e780-fa66-40a8-8240-af2213595c55" class="numbered-list" start="4"><li>Recovery control system → Capabilities of the database system to recover from unexpected issues that require data to be recovered (e.g. backups)</li></ol><ol type="1" id="78f1b991-e799-4b27-84f2-08c61c5c29a6" class="numbered-list" start="5"><li>user-accessible catalog → A user-accessible catalog in a DBMS is a set of metadata tables that store and provide information about the structure and objects in the database, such as tables, columns, indexes, and relationships.</li></ol><ol type="1" id="1121ea2c-16e8-4a20-94b4-20b7f3143c3c" class="numbered-list" start="6"><li>View mechanism → Provides users with only the data they want or need to use.</li></ol></div></p><p id="30c07b45-1b21-472b-ad32-e47161d8a01a" class="">Data that requires <code>relational models</code> is called a <code>RDBMS (Relational Database Management System)</code>.</p><p id="cc399edd-9666-4103-b9d6-b7893531ce9a" class="">what is a relational model?</p><ul id="1cc3c6b2-9abd-4d7a-b1c4-92a11302d676" class="bulleted-list"><li style="list-style-type:disc">A formal data model with a sound mathematical foundation based on set theory and first order predicate logic in which a database is representation as a collection of <code>relations</code>.</li></ul><p id="794c0c28-6df2-4681-9cab-1cb9a151abe9" class="">We are going to use Oracle.</p><h1 id="169b1622-0c51-4a29-b05a-3069c37e2708" class="">Key Database Activities (CRUD) (The essential functionality needed)</h1><ul id="ba6fcdf0-c5d8-4f27-8137-160f8f9bc98e" class="bulleted-list"><li style="list-style-type:disc">Create → Add new data to the database.</li></ul><ul id="77ee3be1-6295-4188-85cb-fb597ba07b4f" class="bulleted-list"><li style="list-style-type:disc">Read → Read current data from the database.</li></ul><ul id="cef296f9-08d5-418f-9963-dd7a84812dc9" class="bulleted-list"><li style="list-style-type:disc">Update → Update or modify current database data.</li></ul><ul id="968d301d-8932-4256-b0c1-0771a85476a5" class="bulleted-list"><li style="list-style-type:disc">Delete → Delete current database data</li></ul><p id="4a011294-2092-4457-bbde-70e210832717" class="">
+</p><p id="e407c530-78e7-4aeb-8a59-285233e1dc64" class="">Languages for database communication</p><ul id="79c3bb81-1144-48c0-98e6-f70f97101484" class="bulleted-list"><li style="list-style-type:disc">DDL - Data definition Language (For creating the functionality CRUD)</li></ul><ul id="cac73505-77ea-4dbf-8785-2a15227c37c7" class="bulleted-list"><li style="list-style-type:disc">DML - Data Manipulation Language (For creating relations, or editing data)<ul id="c7b19dd6-ee25-4640-ba8d-09361d2805b5" class="bulleted-list"><li style="list-style-type:circle">DQL - Data Query Language (For queries)</li></ul></li></ul><ul id="bc3dca34-7b3c-4b3a-b491-5b00d9d0e07f" class="bulleted-list"><li style="list-style-type:disc">DCL - Data Control Language (For access control)</li></ul><ul id="6f6733d7-c160-4459-aae1-1d1a6c7c2734" class="bulleted-list"><li style="list-style-type:disc">TCL - Transaction Control Language</li></ul><p id="17013bce-35fd-4945-9bc5-7cc71a3a4327" class="">
+</p><p id="c1393659-e5bf-4f6c-abea-5b27719c6020" class="">Database model - Structure of the database.</p><p id="e41e6e6f-dedd-4800-a065-b7f84cecde1d" class="">Database schema - Defines what the database looks like, like a description of the database. There&#x27;s multiple types of schemas written, diagram etc.</p><p id="82790248-4600-4823-b670-5dc83343e9a6" class="">Both of these describe different levels of the Database</p><h2 id="ed3b4725-f737-4fed-bfc1-9a2999f7614f" class="">Understanding the difference between database model and database schema</h2><p id="1a25a8b4-1a6e-45e0-9830-8bcd7be5e6be" class="">The terms <strong>database model</strong> and <strong>database schema</strong> are related but distinct concepts in the context of database systems.<div class="indented"><h3 id="1fb9bff6-f0f9-46a2-be72-1ead5b185bea" class="">1. <strong>Database Model</strong></h3><ul id="5c61db2f-5e5b-4f4a-92ec-7e2ec541b8df" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition</strong>: A database model refers to the logical structure, rules, and framework that define how data is stored, organized, and manipulated within a database.</li></ul><ul id="c7528c71-b444-4fb6-900c-f07bb81d9f62" class="bulleted-list"><li style="list-style-type:disc"><strong>Types</strong>: Common types include the relational model, hierarchical model, network model, and object-oriented model.</li></ul><ul id="3197b9b7-1793-49c1-aa6d-249cd79e9039" class="bulleted-list"><li style="list-style-type:disc"><strong>Purpose</strong>: The model provides the theoretical foundation for designing the database. For example, the relational model organizes data into tables (relations) with rows and columns, while the hierarchical model uses a tree-like structure.</li></ul><ul id="ea9526ce-6b1d-4ec8-b4aa-ebada68ae4ec" class="bulleted-list"><li style="list-style-type:disc"><strong>Scope</strong>: It defines the abstract design principles of the database, including how entities relate to each other and the operations that can be performed on the data.</li></ul><h3 id="c0dce398-fed2-4b89-bd20-32ef59468102" class="">2. <strong>Database Schema</strong></h3><ul id="b77dad7a-f9b8-4974-a707-2b4a9b2dc5f6" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition</strong>: A database schema is the actual implementation or blueprint of the database structure within a specific database model. It defines how data is organized in a particular database, including tables, columns, constraints, relationships, and indexes.</li></ul><ul id="88a9c325-b288-4a89-a738-a62caa9c1007" class="bulleted-list"><li style="list-style-type:disc"><strong>Types</strong>: The schema can be represented at different levels, such as the logical schema (high-level structure without storage details) and the physical schema (how the data is actually stored on disk).</li></ul><ul id="865315fb-b10a-40ba-b004-ecd772427fc2" class="bulleted-list"><li style="list-style-type:disc"><strong>Purpose</strong>: The schema provides a concrete design for the database, outlining how the data model will be realized in terms of tables, fields, and constraints in the database management system.</li></ul><ul id="75b9aa55-1293-4b8e-ba66-5298cede08e9" class="bulleted-list"><li style="list-style-type:disc"><strong>Scope</strong>: It deals with the detailed, practical implementation of the database design, based on the chosen model.</li></ul><h3 id="b1c92606-391d-4392-be95-8858f14a0f4b" class="">Summary</h3><ul id="63a97586-3e54-45fb-9e85-7c323e14af86" class="bulleted-list"><li style="list-style-type:disc"><strong>Database Model</strong>: Defines the overall logical framework or approach to data organization (e.g., relational model).</li></ul><ul id="dd55b4e6-d915-4e30-80a5-a1bfd035a81a" class="bulleted-list"><li style="list-style-type:disc"><strong>Database Schema</strong>: Specifies the actual structure and design of the database within that model (e.g., specific tables, columns, and constraints in a relational database).</li></ul></div></p><figure id="90836b80-a183-4d25-a39b-6a3a9682d2fd" class="image"><a href="image%201.png"><img style="width:1075px" src="image%201.png"/></a></figure><figure id="4f2ebb55-ec86-4466-8b87-a5197c0920b4" class="image"><a href="image%202.png"><img style="width:1263px" src="image%202.png"/></a></figure><h2 id="a0b732ac-1784-4be5-afa3-06eb0670908b" class="">Essential features of a DBMS</h2><ol type="1" id="5ee15463-7b36-411d-90ca-e356f8cb0055" class="numbered-list" start="1"><li>Data Storage, retrieval and update : A DBMS must be capable of storage data and managing the operations on it efficiently and reliably.</li></ol><ol type="1" id="bc4479e4-ec5d-4aa8-b68f-a092df6387cc" class="numbered-list" start="2"><li>Concurrecy control system  : Systems that control the concurreny of transactions and operations. Such as when data is being updated, read by multiple users. Ensuring data consistency and isolation.</li></ol><ol type="1" id="1c24a8a1-c334-4eb5-89ef-2da1fa308887" class="numbered-list" start="3"><li>Transaction control : Systems that allow efficient and reliable transactions within the database.</li></ol><ol type="1" id="28e037fd-9d5a-4d9d-8c3f-207b9b74299d" class="numbered-list" start="4"><li>Recovery system : Recoverying from unexpected crashes or issues.</li></ol><ol type="1" id="36b8c9d9-751c-4ff4-b4d6-5de252240c8d" class="numbered-list" start="5"><li>User assessible catalog : Description of the DBMS structure</li></ol><ol type="1" id="1c6a9ff5-958e-4c73-811d-bf6185c88951" class="numbered-list" start="6"><li>Security features : Such as access control</li></ol><ol type="1" id="018ea319-c3b3-40cc-9d82-f09a241dc0c8" class="numbered-list" start="7"><li>Support for data communication</li></ol><ol type="1" id="dc2bc1f5-3a6e-4341-8835-7e2580f76d3f" class="numbered-list" start="8"><li>Integrity services : Maintaing data integrity through constraints or limitations.</li></ol><ol type="1" id="93a6294a-e1a6-40c6-b002-e41c3a9d433a" class="numbered-list" start="9"><li>Utility services</li></ol><ol type="1" id="3a2d87c5-361f-4882-aac0-9874e9ed4dbf" class="numbered-list" start="10"><li>Services to promote data independence.</li></ol><ol type="1" id="742dbf03-61d8-43ff-9e1d-dd46e1186f00" class="numbered-list" start="11"><li>Support for data communication.</li></ol><p id="e4d18a75-2765-4f7a-88c8-b7f1c5d7084d" class="">Issues with File Approach to Data Management (Flat files)</p><ul id="0a2994ce-804b-4bc8-86a2-f77da99a1224" class="bulleted-list"><li style="list-style-type:disc">duplicate or redundant information.</li></ul><ul id="8d0acb12-b93e-438e-81f3-d8f5896e8ecd" class="bulleted-list"><li style="list-style-type:disc">danger of inconsistent data</li></ul><ul id="f3ffa4d1-b399-42b7-ae35-a0d8c1c2f433" class="bulleted-list"><li style="list-style-type:disc">strong coupling between applications and data</li></ul><ul id="cbb5f57d-dfa1-4064-9785-27f30dcf62bd" class="bulleted-list"><li style="list-style-type:disc">hard to manage concurrency control</li></ul><ul id="24a85981-fbb7-4c02-bb99-55d161dd5a8d" class="bulleted-list"><li style="list-style-type:disc">hard to integrate applications aimed at providing cross company services.</li></ul><p id="9d877f6e-72aa-4502-ba93-fe9d5452536d" class="">Data approach to data management solves almost all of these issues.</p><p id="33712b0e-0328-40b6-8d46-2cb952feff95" class="">
+</p><h1 id="a277a9bc-0754-4fbf-9e9f-c139428b9c66" class="">What is data independence?</h1><p id="fd9c6d67-82f0-4642-90ea-307fa51a67a2" class="">When a <strong>DBMS promotes data independence</strong>, it provides services that allow changes to be made to the data&#x27;s structure or storage without affecting the applications or user views that interact with the data. Data independence is a key goal of DBMS design and is divided into two main types:</p><h3 id="0f8e4a2c-bfe9-4912-b8c6-a18be4649b52" class="">1. <strong>Logical Data Independence</strong></h3><ul id="cb898553-91b6-4eb1-bafb-a7571e0d3fc8" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition</strong>: Logical data independence refers to the ability to change the logical schema (the structure of the database, like adding or modifying tables or columns) without affecting existing applications or user interfaces.</li></ul><ul id="f901f249-121f-4827-aa66-7145d38b0bfd" class="bulleted-list"><li style="list-style-type:disc"><strong>Example</strong>: If a new column is added to a table or a table&#x27;s structure is modified, the applications using that table should continue to function without needing changes. For instance, adding a &quot;birthdate&quot; column to a &quot;Users&quot; table shouldn&#x27;t break queries that only access &quot;username&quot; and &quot;email&quot; columns.</li></ul><p id="b714d6ff-9f0f-4f50-a68a-86f999698e9a" class="">Logical data independence is challenging to achieve because application logic often tightly integrates with the logical structure of the database.</p><h3 id="d2b70443-1b39-4668-becb-640f33a54e84" class="">2. <strong>Physical Data Independence</strong></h3><ul id="000a13d3-b437-40d5-92b5-cc050ae6904a" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition</strong>: Physical data independence is the ability to change the physical storage of data (such as how data is indexed, partitioned, or stored on disk) without affecting the logical structure or applications.</li></ul><ul id="24f0b1a2-364e-4a9b-9cef-1492d40773ad" class="bulleted-list"><li style="list-style-type:disc"><strong>Example</strong>: If the DBMS administrator changes the way data is stored on disk (e.g., changing from one storage format to another or creating an index for faster access), this change should be transparent to applications and not require any modifications in the database schema or queries.</li></ul><p id="690e0bcf-2ac5-4018-a265-8df9737059bb" class="">Physical data independence is easier to achieve since most applications don&#x27;t directly interact with the physical storage but rather through higher-level abstractions provided by the DBMS.</p><h3 id="7aa97dad-a50c-4e3b-8db1-c4cd786d3d26" class="">Why Data Independence Matters</h3><ul id="d0e5e0e7-d5a1-4164-b446-b1efccaacaed" class="bulleted-list"><li style="list-style-type:disc"><strong>Flexibility</strong>: It allows the database to evolve over time without disrupting applications or requiring costly rewrites.</li></ul><ul id="a8cf5dbb-fb7c-4bfa-bcb3-74546b843f29" class="bulleted-list"><li style="list-style-type:disc"><strong>Maintenance</strong>: Administrators can optimize or restructure the database (e.g., for performance improvements) without affecting the end-user experience.</li></ul><ul id="e92a583c-9512-4f70-b475-3aa36e51973f" class="bulleted-list"><li style="list-style-type:disc"><strong>Scalability</strong>: Data independence makes it easier to scale the database as new requirements emerge, whether those involve changes to the schema or to the underlying storage.</li></ul><h3 id="f3eecbc6-eac1-4719-aeb9-b55e3956b7a7" class="">Services in DBMS for Promoting Data Independence</h3><p id="74fb18b7-dca4-4da8-af7d-219fc2416d79" class="">DBMSs promote data independence through services like:</p><ul id="d6708483-af1f-4ae3-9cf3-c45e6604aafa" class="bulleted-list"><li style="list-style-type:disc"><strong>Data Abstraction Layers</strong>: By providing different layers of abstraction (physical, logical, and view levels), a DBMS shields applications from the complexities of how data is stored and organized.</li></ul><ul id="ccc67f54-ce72-4c19-8577-f305d6cb0bf1" class="bulleted-list"><li style="list-style-type:disc"><strong>Schema Management Tools</strong>: Tools and interfaces that allow DBAs to modify the schema without affecting dependent applications.</li></ul><ul id="fe05c53a-ec5a-484e-8375-afc4206f9fba" class="bulleted-list"><li style="list-style-type:disc"><strong>Query Optimization and Execution</strong>: Abstracting physical storage details from queries, so that users interact with data at a logical level, while the DBMS handles the actual retrieval and storage.</li></ul><p id="618b94c8-7a0e-449b-a463-b0c56030a1e0" class="">In summary, a DBMS that promotes data independence separates the concerns of data storage, data structure, and application logic, ensuring that changes at one level do not disrupt the others.</p><figure id="66f73136-d3f6-47f5-82d9-485635ef12a7" class="image"><a href="image%203.png"><img style="width:596px" src="image%203.png"/></a></figure><figure id="ed4bdb51-125f-4394-b928-53507d3daf56" class="image"><a href="image%204.png"><img style="width:1277px" src="image%204.png"/></a></figure><p id="d34f230f-875d-4320-938e-62f7ed8b17db" class="">
+</p><h1 id="4fd5cf90-3a5c-4c07-b4b5-837fb5b270fc" class="">Class 2 (lecture 1B)</h1><h2 id="1e7e6a43-a609-4449-b719-43d1a431e0ff" class="">File verses database approach to data management</h2><p id="ff198cad-ff3a-45ad-9565-752ca5ecd85b" class="">File Approach<br/>• duplicate or redundant information will be stored<br/>• danger of inconsistent data<br/>• strong coupling between applications and data<br/>• hard to manage concurrency control<br/>• hard to integrate applications aimed at providing cross-company services<br/></p><figure id="ec6ca830-1fb3-4484-8d29-dcca9f8bcfe4" class="image"><a href="image%205.png"><img style="width:1155px" src="image%205.png"/></a><figcaption>File based approach</figcaption></figure><p id="feeba123-7803-40fa-bc70-a126cbb84b17" class="">Database approach<br/>• superior to the file approach in terms of efficiency, consistency and maintenance<br/>• loose coupling between applications and data<br/>• facilities provided for data querying and retrieva<br/></p><figure id="9c7f939b-9de6-4e54-9554-56efc45a41c9" class="image"><a href="image%206.png"><img style="width:1144px" src="image%206.png"/></a><figcaption>Database approach</figcaption></figure><figure id="a4bb1194-33a6-4997-8b26-d3aa320faf22" class="image"><a href="image%207.png"><img style="width:1146px" src="image%207.png"/></a></figure><figure id="7414e657-6cea-4ab0-9a36-fa49cc468cf3" class="image"><a href="image%208.png"><img style="width:708px" src="image%208.png"/></a></figure><h2 id="37a2ead1-8c45-42eb-ac9d-1cf4f5ea5099" class="">Phases of Databases</h2><ol type="1" id="ca661587-90c0-4783-b2fd-885f2732793e" class="numbered-list" start="1"><li>Phase 1 : This phase involved using databases running on mainframes. <ol type="a" id="37fb9908-330c-4519-927c-2148f444da99" class="numbered-list" start="1"><li>Hierarchical model: The data would be queried by going through an extensive tree like structure to find the specific data item required. Tree-like structure. <ol type="i" id="fa4bb571-5531-4c80-9613-1a9384f389ae" class="numbered-list" start="1"><li>Problems:  Duplicate data , although Log(N) is good still not good enough.</li></ol></li></ol><ol type="a" id="8bfb347c-ebf9-4dc8-9e58-a248ff64bda6" class="numbered-list" start="2"><li>Network model : Graph like structure. Data would be stored and queried using graphs and the edges between nodes would be specified by relations of the data. <ol type="i" id="d9b612e2-025a-4879-88c5-57252142f0b2" class="numbered-list" start="1"><li>Problems: Complicated , records maintained by pointers, Difficult to maintain, Complex queries.</li></ol></li></ol></li></ol><ol type="1" id="53e03591-fc55-41c9-b8cd-c37bb0747b89" class="numbered-list" start="2"><li>Phase 2 : Relational Databases : Relational databases have data split between different tables, and the relations defined between tables allows them to be connected. They use standard SQL to both read and write data. These are typically used by a large variety of businesses and staff.<ol type="a" id="7c988a09-6903-4c7d-b8e8-ded5bd5769ec" class="numbered-list" start="1"><li>Oracle supreme</li></ol><ol type="a" id="228d914b-f3ca-4806-8683-84e3f19c6b47" class="numbered-list" start="2"><li>PostgreSQL : New feature for multiple data types</li></ol><ol type="a" id="91cd2015-d8cd-429e-8e4c-1b540fe8ca49" class="numbered-list" start="3"><li>Object oriented model : Avoid “relational-object impedance mismatch” by tightly coupling objects and database.<ol type="i" id="74ebfd18-51b7-4493-8c94-249d09f868d8" class="numbered-list" start="1"><li>Problems : Complex queries, No Standard API or programming lagnauge.</li></ol></li></ol></li></ol><ol type="1" id="20d7ef94-443b-42cf-a57b-d4edc700319b" class="numbered-list" start="3"><li>Phase 3: Big Data. NoSQL. </li></ol><figure id="54bf7ea9-4b78-4d79-bbf9-a47edd0f3553" class="image"><a href="image%209.png"><img style="width:708px" src="image%209.png"/></a></figure><p id="08a52e0a-ecaa-497b-81d4-791b684c1dbc" class="">What are Data warehouses?</p><p id="cece90e3-39f1-49e0-ba7b-7901dbc3de47" class="">A data warehouse is a type of <strong>data management system</strong> that is designed to enable and support business intelligence (BI) activities, especially analytics. Data warehouses are solely intended to perform queries and analysis and often contain large amounts of historical data.<br/><br/><br/></p><h2 id="66c574f7-0703-4622-8582-722827a8f3b3" class="">Era of Big Data</h2><figure id="eb247fa2-b726-4c03-b037-3ae0bf8fd3c4" class="image"><a href="image%2010.png"><img style="width:708px" src="image%2010.png"/></a></figure><h2 id="d6ba7088-23e5-4818-84dd-8a92ca3ca1b4" class="">Types of operations DBMS are made for</h2><ol type="1" id="bd5f74cb-4d28-4cfd-9db1-32bf9d189ede" class="numbered-list" start="1"><li>OLTP → OnLine Transactional Processing (Daily operations)</li></ol><ol type="1" id="96b0e89f-f4ad-4f78-95f9-a77388953502" class="numbered-list" start="2"><li>OLAP → OnLine Analytical Processing (Research into data and analytics stored over years) (Data warehouses allow us to do this)</li></ol><p id="2c644a6e-9334-4abd-8201-b00f0e550525" class="">
+</p><p id="64ec5f3d-d390-4538-ba97-dbe86a4d819c" class="">Non-relational databases:<div class="indented"><ul id="7fa41c61-4e7b-4d81-8272-45cf5ebacae0" class="bulleted-list"><li style="list-style-type:disc">Multiple types</li></ul><ul id="03e43229-bf74-4298-8046-312e0d155345" class="bulleted-list"><li style="list-style-type:disc">Process unstructured data</li></ul><ul id="aa4fe795-ff6d-4f3f-ae31-56f70e72c107" class="bulleted-list"><li style="list-style-type:disc">Distributed database system</li></ul><ul id="6740fe9d-3037-431e-8966-36f7acea1046" class="bulleted-list"><li style="list-style-type:disc">Quick and flexible</li></ul><ul id="337eab6d-ef1d-40ee-9033-3f65a61c5d58" class="bulleted-list"><li style="list-style-type:disc">Schema-less (There is no structure thus more acceptable and flexible for other types of data)</li></ul><ul id="ecd84b4d-86a5-4d56-886a-16f357d0ae92" class="bulleted-list"><li style="list-style-type:disc">Custom API instead of SQL</li></ul><ul id="5140b5ce-c4d3-4776-969d-6f584fda5f57" class="bulleted-list"><li style="list-style-type:disc">No ACID transactions (<strong>Atomicity, Consistency, Isolation, and Durability) </strong><a href="https://www.bing.com/ck/a?!&amp;&amp;p=256bcfb5297fb738JmltdHM9MTcyNDE5ODQwMCZpZ3VpZD0zODhkNTQ5Mi1hYmZhLTYzNjktMWM3Yi00MDQ3YWEyMTYyOTUmaW5zaWQ9NTY2Mg&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=388d5492-abfa-6369-1c7b-4047aa216295&amp;psq=ACID+databases&amp;u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQUNJRA&amp;ntb=1">In computer science, ACID is a set of properties of database transactions intended to guarantee data validity despite errors, power failures, and other mishaps.</a></li></ul></div></p><p id="99bfbb25-33d7-41d6-ba26-4b693666f200" class="">
+</p><p id="32cd506c-238e-413d-923b-a5c11a9bdf71" class="">Big Data → Big Data is comprised of 3 things. 3 Vs, Volume, Velocity, Variety. The data has a large volume. It has high velocity meaning it is used, changed and added at very fast rates. And has very high variety.</p><p id="663f2a6d-dc4a-493b-b3c0-a00d567ca2f7" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

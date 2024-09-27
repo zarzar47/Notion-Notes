@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Class ???</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lab 1</title><style>
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
@@ -681,5 +681,45 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="1096cb2a-7d52-8084-b299-f2bb824f0265" class="page sans"><header><h1 class="page-title">Class ???</h1><p class="page-description"></p></header><div class="page-body"><h3 id="1096cb2a-7d52-8022-b3af-c97d59e6e9e9" class="">Systemic vs Systematic</h3><p id="1096cb2a-7d52-807c-aa64-e8af4b3d8506" class="">Systemic refers to something fundamental within a system or affecting the entire system. Systematic describes a methodical, organized process or approach.</p><p id="1096cb2a-7d52-80cf-96c6-dd0d584a50ad" class=""><a href="https://www.bing.com/ck/a?!&amp;&amp;p=d6c7997ea3828f52JmltdHM9MTcyNjk2MzIwMCZpZ3VpZD0zODhkNTQ5Mi1hYmZhLTYzNjktMWM3Yi00MDQ3YWEyMTYyOTUmaW5zaWQ9NTA0MA&amp;ptn=3&amp;ver=2&amp;hsh=3&amp;fclid=388d5492-abfa-6369-1c7b-4047aa216295&amp;u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9ncmFtbWFyL3N5c3RlbWF0aWMtdnMtc3lzdGVtaWM&amp;ntb=1">Systematic follows a system, while systemic is part of or embedded in the system itself</a>.</p><p id="1096cb2a-7d52-8038-bb12-ed961e46d046" class="">The part vs the whole argument.</p><p id="a9dc8058-9ccc-4104-9707-e79cbc3fa0d5" class="">Conversation is a very important step in information gathering and requirement illicidation. When you want to get to know your developer you communicate.</p><p id="1096cb2a-7d52-8089-8d45-c7bd2fe513cc" class="">Activity Diagram Notations:</p><figure id="1096cb2a-7d52-80c7-9494-f497bce9791a" class="image"><a href="image%204.png"><img style="width:708px" src="image%204.png"/></a></figure><p id="ab1b0c13-522a-49c4-87f1-4fe6e747dd9f" class="">Sequence Diagram <a href="https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/">https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/</a></p><figure id="1096cb2a-7d52-80ec-b292-d987d6fbc080" class="image"><a href="image%205.png"><img style="width:708px" src="image%205.png"/></a></figure><p id="1096cb2a-7d52-80a7-987f-cce4f89b49bd" class="">User case Diagrams : <a href="https://www.geeksforgeeks.org/use-case-diagram/">https://www.geeksforgeeks.org/use-case-diagram/</a></p><figure id="1096cb2a-7d52-8016-9832-f4e9a1781cd5" class="image"><a href="image%206.png"><img style="width:707.9874877929688px" src="image%206.png"/></a></figure><p id="1096cb2a-7d52-80fc-9eee-cb71974cf89b" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+</style></head><body><article id="18d87176-c4c1-4811-bd76-536811de536e" class="page sans"><header><h1 class="page-title">Lab 1</h1><p class="page-description"></p></header><div class="page-body"><p id="7f13898f-1b1d-4a7a-9e5d-f38a1eb34c40" class="">These commands involving CREATE, GRANT are examples of DCL (Data Control Language) which controls what data is available to who or where.</p><p id="ada7c337-265e-4b45-bd38-e184f9892f4e" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a8a4235d-4712-45bf-9456-11ed1b2e3d56" class="code"><code class="language-SQL">SQL&gt; CREATE USER (any user name with prefix c##) IDENTIFIED BY (any password);
+#e.g. create user c##myuser identified by 123;
+#Note: you may create a user with your own name
+
+SQL&gt; GRANT UNLIMITED TABLESPACE TO C##MYUSER;
+SQL&gt; GRANT CONNECT, RESOURCE, DBA TO C##MYUSER;</code></pre><p id="59d041b7-4775-4938-9d65-edeac77067be" class="">SQL commands that we write are <code>case insensitive</code>.</p><p id="12387a2e-f476-4db0-9c21-d68846f75f2f" class="">Values are NOT case insensitive e.g. Seattle ≠ seattle</p><p id="14ad9d52-9ed1-4298-9375-625afb690097" class="">Constants are defined by quotes e.g. ‘abc’. (Instead of “abc” which may or may not work)</p><p id="785c15be-69de-40fb-8dae-e67b101993c3" class="">Missing values / Unknown values are defined by <code>NULL</code>.</p><p id="9ee3ab5a-9b2f-4ec4-991a-988b27c33a26" class="">Not equal is &lt;&gt; (sometimes ! = is allowed)</p><p id="9eebed4b-913c-4b2a-ab9f-a3ac161ac3c0" class="">Common SQL commands for DQL</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2085cdc1-b309-42fc-abe5-ff0cdb084290" class="code"><code class="language-SQL">SELECT c1, c2 FROM t;
+#Query data in columns c1,c2 from a table (t)
+
+#selective Query
+SELECT * FROM Students
+#Students is the table and * allows us to select EVERYTHING
+
+SELECT Name FROM Students
+#Name is an attribute tht we want to return from the Students table
+
+SELECT c1, c2 FROM t
+WHERE condition;
+#Query Data and filter rows with a condition (e.g. Name == &#x27;Rafay&#x27;)
+
+WHERE condition AND condition2 
+#You can also use OR and NOT
+
+WHERE condition IN (&#x27;Option1&#x27;,&#x27;Option2&#x27;)
+#We can check values from a list of values in this way
+
+SELECT column_name AS alias_name
+#We can make aliases for columns to help ourselves in coding
+
+WHERE c1 LIKE pattern;
+# the pattern is defined by % where % defines &quot;anything after this&quot; e.g. a% (anything that starts with a
+
+ORDER BY c1 ASC [DESC]
+#sorting a column in ascending or descending order
+
+GROUP BY c1;
+#groups rows using an aggregate function
+
+HAVING condition;
+#Filter groups using HAVING clause, used in conjuction iwth GROUP BY
+
+WHERE condition BETWEEN value1 AND value2</code></pre></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
